@@ -1,0 +1,304 @@
+body {
+  background-color: black;
+}
+.mobileNavIcon {
+  display: none;
+}
+/* Navbar CSS */
+.navUl{
+  z-index: 6000;
+  list-style: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  backdrop-filter: blur(5px);
+  padding: 0px;
+  display: flex;
+  gap: var(--gap, 5rem);
+  width: 100%;
+  justify-content: center;
+} 
+
+.navUl a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.navUl a>li {
+  text-align: center;
+}
+
+.navUl a> [aria-hidden="true"] {
+  margin-inline-end: 0.5em;
+}
+
+/*Intro page part*/
+.IntroPage {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/IntroBack.png');
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+}
+
+.login-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.intro-content {
+  margin-top: 100px;
+}
+
+.small-text {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.IntroExp {
+  padding: 0 20% 0 20%;
+  margin-top: 30px;
+
+}
+
+/*login page*/
+.Login {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/IntroBack.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginBox {
+  background-color: rgba(105, 105, 105, 0.8);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-btn {
+  padding: 10px 20px;
+  background-color: #9f3333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #737b84;
+}
+
+/*register CSS*/
+.Register {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUpForm {
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.userInput {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.userInput label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.userInput input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.register-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+/*Home page CSS*/
+.Home {
+  color: rgb(209, 209, 209);
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+}
+
+.image-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.videoList{
+  margin: 10px;
+  background-color: black;
+}
+
+.swiperCSS {
+  text-align: center;
+  padding: 10px;
+}
+
+.swiperCSS img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+}
+
+.movieContainer {
+  width: 250px;
+  margin: 16px;
+  background-color: rgb(48, 48, 113);
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.movieContainer img {
+  max-width:100%;
+}
+
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* search page CSS */
+.Search {
+  background: linear-gradient(to bottom, white);
+}
+
+.input-group {
+  background-image: './assets/SearchMain.jpg';
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  z-index: 3;
+}
+
+.SearchForm {
+  margin-top: 50px;
+  width: 50%; 
+  height: 50%;
+  border-radius: 40px;
+  border-color: white;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+}
+
+.SearchForm::placeholder {
+  color: grey;
+}
+
+/* MovieDetail */
+.pageContainer {
+  margin: 15px;
+}
+
+/* @media (max-width: 40em) {
+  .navUl {
+    --gap: 2em;
+
+    position: fixed;
+    inset: 0 0 0 30%;
+
+    flex-direction: column;
+    padding: min(30vh,10rem) 2em;
+
+    background: hsl(0 0% 0% / 0.75);
+    transform: translateX(100%);
+  }
+
+  .navUl[data-visible="true"] {
+    transform: translateX(0%);
+  } */
+
+  /* @supports (backdrop-filter: blur(1rem)) {
+    .navUl {
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
+    }
+  }
+
+  .mobileNavIcon {
+    display: block;
+    position: absolute;
+    z-index: 7000;
+    background-color: lightblue;
+    background: url("./menu.svg");
+    background-repeat: no-repeat;
+    background-size: 27px;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+    background-color: lightblue;
+  }
+
+  .mobileNavIcon[aria-expanded="true"] {
+    background-image: url("./x-lg.svg");
+  }
+
+  .seperatingDiv {
+    margin: 50px;
+  } */
+/* } */

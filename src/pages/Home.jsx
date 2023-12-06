@@ -1,13 +1,13 @@
 import React from 'react';
 import Nav from '../Nav';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Poster from '../assets/MoviePoster.jpeg';
 import Poster2 from '../assets/ReadyPlayer.jpeg';
-import Poster3 from '../assets/SearchMain.jpg'
-import { movieList } from '../movieList';
-import Movie from '../components/Movie';
+import Poster3 from '../assets/SearchMain.jpg';
+const moveTo = () => {
+  window.location.href = "/Running";
+}
 
 function Home() {
 
@@ -24,28 +24,36 @@ function Home() {
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div className="image-wrapper">
-              <img src={Poster} class="d-block w-100 img-fluid" alt="movie" style={{objectFit: "cover", height: '400px'}}/>
+              <img src={Poster} class="d-block w-100 img-fluid" alt="movie" style={{objectFit: "cover", height: '100%', filter: 'brightness(50%) blur(5px)'}}/>
               </div>
             <div class="carousel-caption d-none d-md-block">
-            <button className="btn btn-secondary" style={{marginBottom: "10px"}}>Watch this right now!</button>
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+            
+              <h5 style={{fontSize: "40px"}}>LALA Land</h5>
+              <p style={{marginBottom: "100px", fontSize: "20px"}}>LaLa Land is the Best Movie to watch with Couples</p>
+              <button className="btn btn-secondary" style={{marginBottom: "100px"}} onClick={moveTo}>Watch this right now!</button>
             </div>
           </div>
           <div class="carousel-item">
-            <img src={Poster2} class="d-block w-100" alt="movie" style={{objectFit: "cover", height: '400px'}}/>
+            <div className="image-wrapper">
+              <img src={Poster2} class="d-block w-100" alt="movie" style={{objectFit: "cover", height: '100%', filter: 'brightness(50%) blur(5px)'}}/>
+            </div>
           <div class="carousel-caption d-none d-md-block">
-          <button className="btn btn-secondary" style={{marginBottom: "10px"}}>Watch this right now!</button>
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+          
+            <h5 style={{fontSize: "40px"}}>Ready Player one</h5>
+            <p style={{marginBottom: "100px", fontSize: "20px"}}>Best Action Movie ever!!</p>
+            <button className="btn btn-secondary" style={{marginBottom: "100px"}} onClick={moveTo}>Watch this right now!</button>
           </div>
         </div>
         <div class="carousel-item">
-          <img src={Poster3} class="d-block w-100" alt="movie" style={{objectFit: "cover", height: '400px'}}/>
+           <div className="image-wrapper">
+            <img src={Poster3} class="d-block w-100" alt="movie" style={{objectFit: "cover", height: '100%', filter: 'brightness(50%) blur(5px)'}}/>
+          
+          </div>
         <div class="carousel-caption d-none d-md-block">
-        <button className="btn btn-secondary" style={{marginBottom: "10px"}}>Watch this right now!</button>
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+        
+          <h5 style={{fontSize: "40px"}}>Free guy</h5>
+          <p style={{marginBottom: "100px", fontSize: "20px"}}>Try Enjoy watchting NPCs.</p>
+          <button className="btn btn-secondary" style={{marginBottom: "100px"}} onClick={moveTo}>Watch this right now!</button>
         </div>
       </div>
     </div>
@@ -59,29 +67,8 @@ function Home() {
     </button>
   </div>
   </div>
-  <div className="videoList">
-    Today's enjoyable Movie!
-    <div className="MovieList">
-      {
-        movieList.results.map((item) => {
-          return(
-            <Movie 
-              title={item.original_title}
-              poster_path={item.poster_path}
-              vote_average={item.vote_average}
-            />
-          )
-        })
-      }
-    </div>
-    <div className="Animation">
-
-    </div>
-    <div className="Documentary">
-
-    </div>
   </div>
-    </div>
+    
   );
 }
 

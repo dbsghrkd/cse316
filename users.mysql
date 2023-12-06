@@ -1,0 +1,11 @@
+CREATE DATABASE project;
+
+CREATE TABLE users(
+    ID VARCHAR(100),
+    password VARCHAR(100),
+    userName VARCHAR(100),
+    email VARCHAR(100),
+    age INT(11)
+);
+
+INSERT INTO users VALUES ('johnKim112', 'minjun000220', 'Kore', 'minjun000220@naver.com', 34);

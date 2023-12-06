@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Nav from '../Nav';
-import search from '../assets/search.png';
 
 function Search({ onClick }) {
 
@@ -8,9 +7,6 @@ function Search({ onClick }) {
     const onChange =(e) => {
         setSearch(e.target.value);
     }
-    // const filterTitle = movies.filter((p) => {
-    //     return p.title.replace(" ","").toLocalLowerCase().includes(search,toLocalLowerCase().replace(" ",""));
-    // })
   return (
     <div className="Search" style={{backgroundColor: "black"}}>
         <Nav />
@@ -21,8 +17,6 @@ function Search({ onClick }) {
                        onChange={onChange}/>
                 </div>
                 <div className="searchResult">
-                    {/* {filterTitle.map(movie => <div><span>{moviee.title}</span>)
-                    </div>)} */}
                 </div>
             </div>
         );

@@ -25,7 +25,7 @@ function MovieDetail() {
                 <div>
                     <div style={{ fontSize: "32px" }}>{state.title}</div>
                     <div style={{ fontSize: "20px", marginTop: '100px' }}>{state.overview}</div>
-                    <button className="btn btn-primary" style={{marginTop: '170px'}} onClick={moveTo}>Watch this!</button>
+                    <button className="btn btn-primary" style={{marginTop: '10px'}} onClick={moveTo}>Watch this!</button>
                 </div>
             </div>
             </div>

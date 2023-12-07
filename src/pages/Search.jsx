@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import Nav from '../Nav';
+import Movie from '../components/Movie';
+import TVlist from '../components/TVlist';
+import { Navigate } from "react-router-dom";
+
 // import { movieList } from "../movieList";
 // import { seriesList } from "../seriesList";
+const IMG_BASE_URLM ="https://image.tmdb.org/t/p/w1280/"
+
+
+// import { IMG_BASE_URL } from '../../../src/components/Movie';
 // Define movieList and seriesList as arrays of objects
 const movieList = [{"adult":false,"backdrop_path":"/9PqD3wSIjntyJDBzMNuxuKHwpUD.jpg","genre_ids":[16,35,10751],"id":1075794,"original_language":"en","original_title":"Leo","overview":"Jaded 74-year-old lizard Leo has been stuck in the same Florida classroom for decades with his terrarium-mate turtle. When he learns he only has one year left to live, he plans to escape to experience life on the outside but instead gets caught up in the problems of his anxious students — including an impossibly mean substitute teacher.","popularity":1508.996,"poster_path":"/pD6sL4vntUOXHmuvJPPZAgvyfd9.jpg","release_date":"2023-11-17","title":"Leo","video":false,"vote_average":7.507,"vote_count":423},
 {"adult":false,"backdrop_path":"/xgGGinKRL8xeRkaAR9RMbtyk60y.jpg","genre_ids":[16,10751,10402,14,35],"id":901362,"original_language":"en","original_title":"Trolls Band Together","overview":"When Branch's brother, Floyd, is kidnapped for his musical talents by a pair of nefarious pop-star villains, Branch and Poppy embark on a harrowing and emotional journey to reunite the other brothers and rescue Floyd from a fate even worse than pop-culture obscurity.","popularity":1710.225,"poster_path":"/qV4fdXXUm5xNlEJ2jw7af3XxuQB.jpg","release_date":"2023-10-12","title":"Trolls Band Together","video":false,"vote_average":7.183,"vote_count":276},
@@ -53,6 +61,10 @@ function Search() {
     const userInput = e.target.value;
     setSearchInput(userInput);
 
+  const onClick = () => {
+    Navigate(`/Movie/`, {})
+ }
+
     // Filter movies based on user input
     const filteredMovies = movieList.filter((movie) =>
       movie.title.toLowerCase().includes(userInput.toLowerCase())
@@ -66,6 +78,7 @@ function Search() {
     // Update the results state
     setSearchResults({ movies: filteredMovies, series: filteredSeries });
   };
+
 
   return (
     <div className="Search" style={{ backgroundColor: "black" }}>
@@ -82,21 +95,44 @@ function Search() {
       <div className="searchResult" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
         {/* Display movie results */}
-        <div>
-          <h2>Movies</h2>
+        <h2>Movies</h2>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+          <div style={{display: 'flex'}}>
           {searchResults.movies.map((movie) => (
             <div key={movie.id}>
-              <span>{movie.title}</span>
+              <Movie 
+                title={movie.original_title}
+                poster_path={movie.poster_path}
+                vote_average={movie.vote_average}
+                overview={movie.overview}
+              />
+              {movie.poster_path && (
+                <div>
+                  {/* Create the full path for the movie poster */}
+                </div>
+              )}
             </div>
           ))}
+          </div>
         </div>
 
         {/* Display series results */}
-        <div>
-          <h2>Series</h2>
+        <h2>Series</h2>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+          
           {searchResults.series.map((series) => (
             <div key={series.id}>
-              <span>{series.name}</span>
+            <TVlist
+              name={series.name}
+              poster_path={series.poster_path}
+              vote_average={series.vote_average}
+              overview={series.overview} 
+              />
+                {series.poster_path && (
+            <div>
+                <span>{series.title}</span>
+            </div>
+    )}
             </div>
           ))}
         </div>

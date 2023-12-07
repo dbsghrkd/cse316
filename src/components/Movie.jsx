@@ -16,7 +16,7 @@ function Movie( props ) {
         <div className="movieContainer" onClick={onClickMovieItem}>
             <img src={IMG_BASE_URL + props.poster_path} alt="posterOfMovie" />
             <div className="movieInfo">
-                <h5 style={{fontSize: '20px'}}>{props.title}</h5>
+                <h5 style={{fontSize: '15px'}}>{props.title}</h5>
                 <span>{props.vote_average}</span>
             </div>
             </div>

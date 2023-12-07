@@ -7,7 +7,6 @@ function TVlist( props ) {
     const navigate = useNavigate();
 
     const onClickSeriesItem = () => {
-        
         navigate(`/Series/${props.name}`, {
             state: props
         })    
@@ -17,7 +16,7 @@ function TVlist( props ) {
         <div className="movieContainer" onClick={onClickSeriesItem}>
             <img src={IMG_BASE_URL + props.poster_path} alt="posterOfSeries" />
             <div className="movieInfo">
-                <h5 style={{fontSize: '20px'}}>{props.name}</h5>
+                <h5 style={{fontSize: '15px'}}>{props.name}</h5>
                 <span>{props.vote_average}</span>
             </div>
             </div>

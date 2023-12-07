@@ -4,7 +4,7 @@ import './App.css';
 import homeIcon from './assets/Home_image.png';
 import searchIcon from './assets/search.png';
 import infoIcon from './assets/mypageicon.png';
-import logoIcon from './assets/logo.png';
+import logoIcon from './assets/Cinema.jpg';
 import './Nav.css';
 
 function Nav() {
@@ -15,9 +15,10 @@ function Nav() {
                 <div className="align-items-center">
                     <Link className="navbar-brand" to={'/Home'}>
                         <img src={homeIcon} className="iconPosition" width="30" height="30" alt="Home"></img>
-                        <img src={logoIcon} width="100" alt="Logo"></img>
                     </Link>
-                         
+                    <Link className="navbar-brand" to={'/Home'}>
+                    <img src={logoIcon} width="100" alt="Logo"></img>     
+                    </Link>
                 </div>
                 <ul className="nav justify-content-right">
                     <li className="nav-item dropdown">

@@ -15,7 +15,8 @@ function Home() {
     <div className="Home">
       <Nav />
       <div className="upperSection">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style={{fontSize: '20px', textAlign: 'center'}}>
+        "Today's Recommend Content! Enjoy and Have a Good Day!!"
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -29,7 +30,7 @@ function Home() {
             <div class="carousel-caption d-none d-md-block">
             
               <h5 style={{fontSize: "40px"}}>LALA Land</h5>
-              <p style={{marginBottom: "100px", fontSize: "20px"}}>LaLa Land is the Best Movie to watch with Couples</p>
+              <p style={{marginBottom: "100px", fontSize: "20px"}}>When Sebastian, a pianist, and Mia, an actress, follow their passion and achieve success in their respective fields, they find themselves torn between their love for each other and their careers.</p>
               <button className="btn btn-secondary" style={{marginBottom: "100px"}} onClick={moveTo}>Watch this right now!</button>
             </div>
           </div>
@@ -40,7 +41,7 @@ function Home() {
           <div class="carousel-caption d-none d-md-block">
           
             <h5 style={{fontSize: "40px"}}>Ready Player one</h5>
-            <p style={{marginBottom: "100px", fontSize: "20px"}}>Best Action Movie ever!!</p>
+            <p style={{marginBottom: "100px", fontSize: "20px"}}>When the creator of a virtual reality world called OASIS dies, he leaves a challenge behind. Hidden inside the virtual world is an Easter Egg, which grants a worthy person total control over OASIS.</p>
             <button className="btn btn-secondary" style={{marginBottom: "100px"}} onClick={moveTo}>Watch this right now!</button>
           </div>
         </div>
@@ -52,7 +53,7 @@ function Home() {
         <div class="carousel-caption d-none d-md-block">
         
           <h5 style={{fontSize: "40px"}}>Free guy</h5>
-          <p style={{marginBottom: "100px", fontSize: "20px"}}>Try Enjoy watchting NPCs.</p>
+          <p style={{marginBottom: "100px", fontSize: "20px"}}>Guy lives a seemingly peaceful life as a bank teller. However, an encounter with a pretty but mysterious woman makes him realise that he is a non-playable character in a massive online video game.</p>
           <button className="btn btn-secondary" style={{marginBottom: "100px"}} onClick={moveTo}>Watch this right now!</button>
         </div>
       </div>

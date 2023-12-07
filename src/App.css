@@ -5,6 +5,10 @@ body {
   display: none;
 }
 /* Navbar CSS */
+.Nav {
+  padding-bottom: -10px;
+}
+
 .navUl{
   z-index: 6000;
   list-style: none;
